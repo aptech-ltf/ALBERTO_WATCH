@@ -1,0 +1,52 @@
+<!-- Traversing and animating elements in jQuery is a powerful way to create dynamic and interactive web pages. In this example, we have a simple HTML structure with a button and a div element. When the button is clicked, the div will animate by sliding to the right and changing its opacity.
+1) Ancenstor :parent, grandparent aur us se upar ke sab buzurg. Span ke ancestors: li, ul, div, div.ancestor.
+2) Descendant: ancestor ke andar ke sab bache (bacha, pota, parpota). -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+<style>
+    .ancestor * {
+       display: block;
+       border: 2px solid red;
+       font-size: 20px;
+       padding: 10px;
+       margin: 10px;
+
+    }
+</style>
+<body>
+    <h1>Jquery</h1>
+    <div class="ancestor"> 
+        
+        <div style="width: 600px;"> greate grandparent 
+            <ul> grandparent
+                <li> parent
+                    <span>span</span>
+                    <span>span</span>
+
+                </li>
+            </ul>
+
+
+        </div>
+
+    </div>
+<script>
+    $(document).ready(function(){
+        $("span").parent().css({
+            "background-color": "yellow",
+            "color": "black",
+            "border": "2px solid green",
+        });
+
+    });
+</script>
+    
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!-- types of jquery
+jquery element selector
+jquery id selector
+jquery class selector 
+hide
+show
+this
+toggle
+click
+alert
+-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery</title>
+    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>jquery syntax</h1>
+    <h5> Write markup code on the left side of the editor to instantly render class, sequence, activity, state, mindmap,
+        and component diagrams on the right</h5>
+    <button class="btn btn-danger m-5" id="mybutton">hide me</button>
+    <button class="btn btn-danger m-5 mybutton1">show me</button>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, itaque optio quisquam vero dolorum at ea.
+        Praesentium animi quisquam quasi id nostrum enim incidunt porro aut modi neque, non possimus?</p>
+    </div>
+
+    <button type="button" id="alert" class="btn btn-dark">Alert</button>
+    <button id="toggle" class="btn btn-primary">Toggle</button>
+    <button id="color" class="btn btn-warning">Change Color</button>
+    <!-- <button id="alert" class="btn btn-dark">Alert</button> -->
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#mybutton").click(function () {
+                $("h5").hide()
+            });
+
+            $(".mybutton1").click(function () {
+                $("h5").show()
+            });
+
+            $("div p").css("color", "blue");
+
+            $("#alert").click(function(){
+                alert("Saved!")
+            });
+
+            $("#toggle").click(function () {
+             $("p").toggle();
+            });
+
+            // $("#color").click(function () {
+            //     $(".btn").css("background-color", "red");
+            // });
+
+            // $("#color").click(function () {
+            // $(".btn").css("background-color", "red");
+            // });
+             $("#color").click(function () {
+                $(this).css("background-color", "red");
+            });
+
+            $("#alert").click(function () {
+                alert("Button clicked successfully!");
+            });
+
+            $(".text").css("color", "blue");
+
+
+
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jquery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- <script src="https://jquery.com" integrity="sha256-R8wN91R6A9mZ451qJ1g6A7v7iG2X9vX9a4g1k7A9X9U=" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <style>
+    div{
+        width: 100px;
+        height: 100px;
+        border: 2px solid yellow;
+        /* display: none; */
+    }
+    .hidden-box{
+         display: none;
+    }
+</style>
+  <body>
+    <h3>this is jquery library</h3>
+
+
+<div id="div1" class="hidden-box" style="background-color: rgb(144, 199, 43);">div1</div>
+    <div  id="div2" class="hidden-box" style="background-color: red;">div2</div>
+    <div  id="div3" class="hidden-box" style="background-color: green">div3</div>
+    <div  id="div4" class="hidden-box"  style="background-color: blue">div4</div>
+    <div  id="div5" class="hidden-box" style="background-color: orange">div5</div>
+     
+    <button class="fadein">fade in</button>
+
+
+    <div  id="div6" style="background-color: rgb(144, 199, 43);">div1 fade out </div>
+    <div  id="div7"  style="background-color: red;">div2 fade out</div>
+    <div  id="div8"  style="background-color: green">div3 fade out</div>
+    <div  id="div9"  style="background-color: blue">div4 fade out</div>
+    <div  id="div10"  style="background-color: orange">div5 fade out</div>
+
+    <button class="fadeout">fade out</button>
+
+
+    <script>
+      $(document).ready(function () {
+        
+        $(".fadein").click(function() {
+            $("#div1").fadeIn("slow");
+            $("#div2").fadeIn("fast");
+            $("#div3").fadeIn(2000);
+
+            $("#div4").fadeIn("slow");
+            $("#div5").fadeIn("fast");
+            // $("#div3").fadeIn(2000);
+            
+            });
+
+            $(".fadeout").click(function(){
+            $("#div6").fadeOut("slow");
+            $("#div7").fadeOut("fast");
+            $("#div8").fadeOut(2000);
+
+            $("#div9").fadeOut("slow");
+            $("#div10").fadeOut("fast");
+
+            });        
+      });
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,89 @@
+<!-- form feature 
+
+1) container
+2) h2
+3) row
+4) col-md-6 *2
+5) form control
+6)passowrd
+7) courty 
+message 
+email -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Boostrap form</h2>
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Library</li>
+                <li class="breadcrumb-item active" aria-current="page">Contats us</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" disabled>
+                </div>
+
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="emial" value="test@gmail.com" class="form-control" readonly>
+                </div>
+                <div class="form-group">
+                    <label>password</label>
+                    <input type="password" class="form-control">
+                    <small class="form-text text-muted "> Your passwor should be 8-20 character</small>
+                </div>
+
+                <div class="form-group">
+                    <label>city</label>
+                    <select name="" id="" Class="form-control">
+                        <option value="">Karachi</option>
+                        <option value="">hyderabad</option>
+                        <option value="">lahore</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Messaage</label>
+                    <textarea name="" id="" class="form-control"></textarea>
+                </div>
+
+                <div class="form-control">
+                    <label for="customRange1" class="form-label">amount range</label>
+                    <input type="range" class="form-range" id="customRange1">
+
+                </div>
+
+
+
+
+
+
+            </div>
+            <div class="col-md-6"></div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

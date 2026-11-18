@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<style>
+    div {
+        background-color: brown;
+        width: 300px;
+        height: 300px;
+        border: 2px solid black;
+        color: black;
+        text-align: center;
+        font-size: 20px;
+        position: relative;
+    }
+    .ancestor * {
+       display: block;
+       border: 2px solid red;
+       font-size: 20px;
+       padding: 10px;
+       margin: 10px;
+
+    }
+</style>
+
+<body>
+
+    <h1>Animate website</h1>
+    <button>Show Home</button>
+    <p>click the above button to animate below box</p>
+    <div>
+        this box will be animated when you click the button above. It will fade in and slide down into view, creating a
+        smooth and visually appealing effect. You can customize the animation duration and style as needed to fit your
+        website's design.
+
+    </div>
+
+    <h1>Jquery</h1>
+    <div class="ancestor"> descendent
+        <div style="width: 600px;"> greate grandparent
+            <ul> grandparent
+                <li> parent
+                    <span>span</span>
+                    <span>span</span>
+
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    left: '300px',
+                    opacity: '0.5',
+                });
+
+            });
+        });
+
+    </script>
+    <script>
+
+    $(document).ready(function(){
+        $("span").parent().css({
+            "background-color":"blue",
+            "color": "black",
+             "border": "2px solid green",
+
+        })
+    });
+</script>
+</body>
+
+</html>

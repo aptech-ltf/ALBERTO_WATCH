@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+</head>
+
+<style>
+    body {
+        font-family: Arial;
+    }
+
+    a {
+        text-decoration: none;
+        color: #333;
+        padding: 3px 6px;
+        display: inline-block;
+    }
+
+    li.active>a {
+        background: #ffe066;
+    }
+
+    li.current>a {
+        background: #2f9e44;
+        color: #fff;
+    }
+
+    #crumb {
+        font-weight: bold;
+        color: #1971c2;
+        margin-bottom: 10px;
+    }
+</style>
+
+<body>
+    <h1>Jquery nav</h1>
+
+    <div id="crumb">Home</div>
+    <ul>
+        <li><a href="#">Electronic</a>
+            <ul>
+                <li><a href="#">Mobile</a>
+                    <ul>
+                        <li><a href="#">Iphone</a></li>
+                        <li><a href="#">samsung</a></li>
+
+                    </ul>
+                </li>
+
+                <li><a href="#">Laptop</a>
+                    <ul>
+                        <li><a href="#">Dell</a></li>
+                        <li><a href="#">HP</a></li>
+
+                    </ul>
+                </li>
+
+            </ul>
+        </li>
+
+        <li><a href="#">Clothes</a>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">WoMen</a></li>
+            </ul>
+
+
+        </li>
+    </ul>
+
+    <p id="info"></p>
+
+
+</body>
+
+</html>
